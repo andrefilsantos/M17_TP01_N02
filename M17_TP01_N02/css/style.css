@@ -1,0 +1,75 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nav-bar-top {
+    margin-top: -50px;
+    height: 90px;
+}
+
+.nav-top {
+    background-image: none !important;
+    background-color: #fe9126 !important;
+    border-color: #fe9126;
+}
+
+.navbar {
+    border-radius: 0;
+    border: none;
+}
+
+.logo {
+    height: 100px;
+    margin-top: -15px;
+}
+
+li.active > a {
+    background-image: none !important;
+    background-color: #cc6600 !important;
+    box-shadow: none !important;
+}
+
+li a {
+    color: #fff !important;
+}
+
+li a:hover {
+    color: #cecece !important;
+}
+
+span.name {
+    color: #ff7e00;
+    font-weight: bold
+}
+
+.logosCurso {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+/*FOOTER*/
+footer#site {
+    background-image: url('../images/wallpaper.png');
+    background-size: cover;
+    vertical-align: middle;
+    height: 400px;
+    padding: 50px;
+    padding-top: 110px; 
+    color: #fff;
+    margin-top: 50px;
+}
+
+div.author-info {
+    padding: 25px;
+    background-color: #ff7e00;
+    margin-top: -30px;
+    margin-bottom: -70px;
+    border-top: 8px solid #cc6600;
+    color: #fff;
+}
