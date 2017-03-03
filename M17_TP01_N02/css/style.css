@@ -37,9 +37,9 @@ li a {
     color: #fff !important;
 }
 
-li a:hover {
-    color: #cecece !important;
-}
+    li a:hover {
+        color: #cecece !important;
+    }
 
 span.name {
     color: #ff7e00;
@@ -60,7 +60,7 @@ footer#site {
     vertical-align: middle;
     height: 400px;
     padding: 50px;
-    padding-top: 110px; 
+    padding-top: 110px;
     color: #fff;
     margin-top: 50px;
 }
@@ -72,4 +72,105 @@ div.author-info {
     margin-bottom: -70px;
     border-top: 8px solid #cc6600;
     color: #fff;
+}
+
+body#login {
+    background-image: url("../images/wallpaper_2.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body#login div#header {
+    background: rgba(48, 65, 96, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+body#login div#body {
+    padding: 20px;
+    background-color: #fff;
+}
+
+div#elements {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 1px solid #0DB8DF !important;
+    width: 25%;
+}
+
+.glyphicon {
+    margin-right: 5px;
+}
+
+.thumbnail {
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item {
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image {
+    margin-right: 10px;
+}
+
+.item.list-group-item .thumbnail {
+    margin-bottom: 0px;
+}
+
+.item.list-group-item .caption {
+    padding: 9px 9px 0px 9px;
+}
+
+.item.list-group-item:nth-of-type(odd) {
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after {
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img {
+    float: left;
+}
+
+.item.list-group-item:after {
+    clear: both;
+}
+
+.list-group-item-text {
+    margin: 0 0 11px;
+}
+
+
+/*********** MOBILE ************/
+@media (max-width: 767px) {
+    #search {
+        visibility: hidden;
+    }
+
+    #info {
+        visibility: hidden;
+    }
+
+    #logo {
+        width: 100%;
+    }
 }

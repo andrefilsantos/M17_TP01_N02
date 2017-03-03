@@ -9,9 +9,11 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <!--<link rel="stylesheet" href="http://getbootstrap.com/examples/carousel/carousel.css" />-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="http://getbootstrap.com/examples/carousel/carousel.css" />
-    <link href="css/style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -19,15 +21,15 @@
     <form id="form1" runat="server">
         <div id="nav-bar-top">
             <div class="container" style="margin-top: -20px">
-                <div class="col-sm-4">
+                <div class="col-sm-4" id="info">
                     <span class="text-center">Telefone: 232000000</span>
                 </div>
                 <div class="col-sm-4">
-                    <span class="text-center">
+                    <span class="text-center" id="logo">
                         <img src="images/logo.png" alt="OPCS" class="logo" />
                     </span>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 text-center" id="search">
                     <div class="input-group">
                         <input type="text" class="form-control" aria-label="...">
                         <div class="input-group-btn">
@@ -60,7 +62,7 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#contact">Sobre</a></li>
-                            <li><a href="#contact">Login</a></li>
+                            <li><a href="login.aspx">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +77,7 @@
                     <div class="info-site">
                         <div class="col-md-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel luctus dolor. Aliquam hendrerit egestas lorem vitae volutpat. Integer nec eros ac elit malesuada hendrerit non in leo. Fusce vulputate quam quis volutpat pulvinar. Vivamus molestie sed felis quis pharetra. Ut sollicitudin pellentesque dolor vitae pellentesque. Pellentesque rutrum dictum elementum. Vivamus rutrum purus augue, at rhoncus nulla scelerisque non. Curabitur aliquam enim ex, vitae pretium erat vestibulum laoreet. Sed porttitor magna a porta malesuada. 
-                            <img src="images/logos todos com contorno.png" class="img img-responsive logosCurso"/>
+                            <img src="images/logos todos com contorno.png" class="img img-responsive logosCurso" />
                         </div>
                         <div class="col-md-4">
                             <blockquote>

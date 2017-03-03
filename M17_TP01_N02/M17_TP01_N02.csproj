@@ -64,8 +64,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\painel\stylePainel.css" />
+    <Content Include="images\products\1\a005ca77-6d1c-4602-8c58-12e8f407f93c.jpg" />
+    <Content Include="painel\admin.aspx" />
+    <Content Include="painel\AllUsers.aspx" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logos todos com contorno.png" />
+    <Content Include="images\wallpaper.png" />
+    <Content Include="login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
+    <Content Include="images\logo.psd" />
+    <Content Include="painel\MasterPagePainel.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,10 +91,50 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.1.1.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="painel\user.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modal\Manager.cs" />
+    <Compile Include="painel\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="painel\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="painel\AllUsers.aspx.cs">
+      <DependentUpon>AllUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="painel\AllUsers.aspx.designer.cs">
+      <DependentUpon>AllUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modal\Database.cs" />
+    <Compile Include="painel\MasterPagePainel.Master.cs">
+      <DependentUpon>MasterPagePainel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="painel\MasterPagePainel.Master.designer.cs">
+      <DependentUpon>MasterPagePainel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="painel\user.aspx.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="painel\user.aspx.designer.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -100,6 +151,7 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

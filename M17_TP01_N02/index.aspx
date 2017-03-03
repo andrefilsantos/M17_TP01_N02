@@ -61,8 +61,9 @@
         </div>
         <div class="novidades">
             <h1><span class="name">OPCS</span>, isto é novo por cá</h1>
+            <div runat="server" ID="divLatestProducts" class="row list-group"></div>
         </div>
-        <div class="novidades">
+        <div class="oportunidades">
             <h1><span class="name">OPCS</span>, é agora ou nunca</h1>
         </div>
     </div>

@@ -1,0 +1,11 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.panel div.author-info {
+    margin-top: 0px;
+    margin-bottom: -70px
+}
