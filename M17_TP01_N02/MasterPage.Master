@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="M17_TP01_N02.Site1" %>
+<%@ Import Namespace="M17_TP01_N02.Modal" %>
+<%@ Import Namespace="System.Data" %>
 
 <!DOCTYPE html>
 
@@ -26,14 +28,15 @@
                 </div>
                 <div class="col-sm-4">
                     <span class="text-center" id="logo">
-                        <img src="images/logo.png" alt="OPCS" class="logo" />
+                        <a href="index.aspx">
+                            <img src="images/logo.png" alt="OPCS" class="logo" /></a>
                     </span>
                 </div>
                 <div class="col-sm-4 text-center" id="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" aria-label="...">
+                        <asp:TextBox runat="server" class="form-control" ID="txtSearch"></asp:TextBox>
                         <div class="input-group-btn">
-                            <asp:Button runat="server" Text="Pesquisar" CssClass="btn btn-default" />
+                            <asp:Button runat="server" Text="Pesquisar" CssClass="btn btn-default" OnClick="OnClick"/>
                         </div>
                     </div>
                 </div>
@@ -53,16 +56,42 @@
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">Computadores</a></li>
-                            <li><a href="#contact">Componentes</a></li>
-                            <li><a href="#contact">Periféricos</a></li>
-                            <li><a href="#contact">Armazenamento</a></li>
-                            <li><a href="#contact">Cabos/Adaptadores</a></li>
+                            <li
+                                <% 
+                                var page = ContentPlaceHolder1.Page.GetType().FullName;
+                                if (page.Contains("ASP.index_aspx"))
+                                    Response.Write(" class='active'");
+                                 %>><a href="index.aspx">Home</a></li>
+                            <%
+                                var categories = Database.Instance.AllActiveCategories();
+                                foreach (DataRow item in categories.Rows) {
+                                    Response.Write("<li");
+                                    if (page.Contains("ASP.category_aspx") && Request["cat"] == item[1].ToString())
+                                        Response.Write(" class='active'");
+                                    Response.Write($"><a href='category.aspx?cat={item[1]}'>{item[1]}</a></li>");
+                                }
+                            %>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#contact">Sobre</a></li>
+                            <li
+                                <%
+                                if (page.Contains("ASP.about_aspx"))
+                                    Response.Write(" class='active'");
+                                 %>><a href="about.aspx">Sobre</a>
+                            </li>
+                            <% 
+                                if (Session["username"] == null) { %>
                             <li><a href="login.aspx">Login</a></li>
+                            <%
+                                } else { %>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><% Response.Write(Database.Instance.UserInfo(int.Parse(Session["id"].ToString())).Rows[0][1]); %></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="painel/index.aspx" style="color: orange !important">A Minha Conta</a></li>
+                                    <li><a href="logout.aspx" style="color: orange !important">Terminar Sessão</a></li>
+                                </ul>
+                            </li>
+                            <% } %>
                         </ul>
                     </div>
                 </div>
@@ -71,6 +100,18 @@
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <div runat="server" id="div_aviso">
+                <nav class="navbar alert alert-warning navbar-fixed-bottom">
+                    <div class="container">
+                        <p class="col-md-10 text-center">
+                            ESTE WEBSITE UTILIZA COOKIES QUE TÊM FUNCIONALIDADES QUE MELHORAM A SUA NAVEGAÇÃO.
+                            <br />
+                            AO CONTINUAR A NAVEGAR, ESTÁ A CONCORDAR COM A SUA UTILIZAÇÃO.
+                        </p>
+                        <asp:Button ID="btCookie" runat="server" CssClass="btn btn-default col-md-2" Text="Fechar" OnClick="btCookie_OnClick" />
+                    </div>
+                </nav>
+            </div>
             <!-- Footer -->
             <footer class="text-center" id="site">
                 <div class="container">

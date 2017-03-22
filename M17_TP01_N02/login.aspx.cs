@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Web;
+using System.Web.UI;
 using M17_TP01_N02.Modal;
 
 namespace M17_TP01_N02
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Login : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,30 +16,18 @@ namespace M17_TP01_N02
         {
             try
             {
-                if (Database.Instance.Login(txtUsername.Text, txtPassword.Text))
-                {
-                    var responseCookie = Session["user"];
-                    if (responseCookie != null && Database.Instance.UserInfo(int.Parse(responseCookie.ToString())).Rows[0]["role"].ToString() == "0")
-                        Response.Redirect("painel/admin.aspx");
-                    else if (responseCookie != null && Database.Instance.UserInfo(int.Parse(responseCookie.ToString())).Rows[0]["role"].ToString() == "1")
-                        Response.Redirect("painel/index.aspx");
-                    else if (responseCookie != null && Database.Instance.UserInfo(int.Parse(responseCookie.ToString())).Rows[0]["role"].ToString() == "3")
-                        Response.Redirect("painel/user.aspx");
-                    else
-                        Response.Write("<script>alert('Erro');</script>");
-                }
-                else
-                {
-                    Response.Write("<script>alert('Nome de Utilizador ou Password incorretos');</script>");
-                }
-                Response.Redirect(Database.Instance.Login(txtUsername.Text, txtPassword.Text)
-                    ? "painel/index.aspx"
-                    : "index.aspx");
+                var dados = Database.Instance.Login(txtUsername.Text, txtPassword.Text);
+                if (dados == null || dados.Rows.Count == 0)
+                    throw new Exception("Username ou Password inválidos.");
+                Session["username"] = dados.Rows[0]["username"].ToString();
+                Session["role"] = dados.Rows[0]["role"].ToString();
+                Session["id"] = dados.Rows[0]["idUser"].ToString();
+                Response.Redirect(Session["role"].Equals("0") ? "painel/admin.aspx?tab=products" : "painel/user.aspx");
             }
-            catch (Exception exception)
+            catch (Exception erro)
             {
-                Console.WriteLine(exception);
-                throw;
+                lblError.Text = erro.Message;
+                lblError.CssClass = "alert alert-danger";
             }
         }
     }

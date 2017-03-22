@@ -29,6 +29,8 @@ C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_
 C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\bin\M17_TP01_N02.pdb
 C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\obj\Debug\M17_TP01_N02.csprojResolveAssemblyReference.cache
 C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\obj\Debug\M17_TP01_N02.dll
 C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\obj\Debug\M17_TP01_N02.pdb
-C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\obj\Debug\M17_TP01_N02.csprojResolveAssemblyReference.cache
+C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\bin\Newtonsoft.Json.dll
+C:\Users\andre\onedrive\documentos\visual studio 2017\Projects\M17_TP01_N02\M17_TP01_N02\bin\Newtonsoft.Json.xml

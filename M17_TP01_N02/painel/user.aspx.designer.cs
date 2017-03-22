@@ -11,7 +11,7 @@ namespace M17_TP01_N02.painel
 {
 
 
-    public partial class user
+    public partial class User
     {
     }
 }

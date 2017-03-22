@@ -46,6 +46,8 @@
                 <asp:Button runat="server" ID="btnLogin" CssClass="btn btn-default pull-right" Text="Login" OnClick="btnLogin_OnClick" />
                 <br />
                 <br />
+                <br />
+                <asp:Label runat="server" ID="lblError" CssClass="col-md-12"></asp:Label>
             </div>
         </div>
     </form>

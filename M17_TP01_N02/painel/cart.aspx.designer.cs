@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M17_TP01_N02 {
+namespace M17_TP01_N02.painel {
     
     
-    public partial class AllUsers {
+    public partial class cart {
         
         /// <summary>
-        /// gvUsers control.
+        /// lblCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUsers;
+        protected global::System.Web.UI.WebControls.Label lblCart;
+        
+        /// <summary>
+        /// divCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCart;
     }
 }

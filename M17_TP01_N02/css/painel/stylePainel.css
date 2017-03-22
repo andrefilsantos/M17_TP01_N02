@@ -6,6 +6,26 @@ body {
 
 
 .panel div.author-info {
-    margin-top: 0px;
-    margin-bottom: -70px
+    margin-top: 30px;
+    margin-bottom: -100px
 }
+
+ul.sidebar {
+    background-color: #fe9126;
+    color: #fff0f5;
+    padding: 15px;
+}
+
+    ul.sidebar li {
+        padding: 15px;
+        list-style: none;
+    }
+
+    ul.sidebar a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    ul.sidebar li.active {
+        background-color: #cc6600;
+    }
