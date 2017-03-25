@@ -3,7 +3,7 @@
         public static void SendMail(string para, string assunto, string texto, string anexo = null) {
             //objetos mail
             var mensagem = new System.Net.Mail.MailMessage();
-            var credenciais = new System.Net.NetworkCredential("dev.andrefilsantos@gmail.com", "Ts3$A4KZ");
+            var credenciais = new System.Net.NetworkCredential("dev.andrefilsantos@gmail.com", "********");
             var dequem = new System.Net.Mail.MailAddress("dev.andrefilsantos@gmail.com");
             var smtp = new System.Net.Mail.SmtpClient();
 
